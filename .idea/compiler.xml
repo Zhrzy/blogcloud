@@ -8,8 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-api-commons" />
         <module name="cloud-consumer-feign-order80" />
+        <module name="cloud-consumer-order-hystrix80" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-eureka7002" />
+        <module name="cloud-provider-hystrix-payment8100" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-payment8002" />
         <module name="cloudproviderpayment8001" />
