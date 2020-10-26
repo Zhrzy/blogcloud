@@ -29,4 +29,9 @@ public class HystrixPaymentController {
         return paymentService.getTimeOutGloble();
     }
 
+    @GetMapping("/hystrix/cut/{id}")
+    public String ServiceCut(@PathVariable("id") int id) {
+        return paymentService.ServerCut(id);
+    }
+
 }

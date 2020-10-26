@@ -25,4 +25,9 @@ public class PaymentServiceFallBack implements PaymentServiceFeign {
         return "作用于feign客户端接口的fallback --- getTimeOutGloble";
 
     }
+
+    @Override
+    public String ServiceCut(int id) {
+        return "作用于feign客户端接口的fallback --- ServiceCut";
+    }
 }

@@ -51,4 +51,10 @@ public class OrderHystrixController {
         return "全局的服务降级.";
     }
 
+    @GetMapping("/h/cut/{id}")
+    public  String getCutService(@PathVariable("id") int id){
+
+        return paymentServiceFeign.ServiceCut(id);
+    }
+
 }

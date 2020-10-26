@@ -21,4 +21,7 @@ public interface PaymentServiceFeign {
 
     @GetMapping("/hystrix/gettimeout/")
     public String getTimeOutGloble();
+
+    @GetMapping("/hystrix/cut/{id}")
+    public String ServiceCut(@PathVariable("id") int id);
 }

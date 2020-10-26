@@ -1,10 +1,14 @@
 package com.zy.myblog.service;
 
+import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import org.springframework.cloud.netflix.hystrix.HystrixProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -47,6 +51,26 @@ public class PaymentService {
         return "服务端8100 ：Hystrix fallback ------服务超时或则错误";
     }
 
+    /*服务熔断*/
+
+    @HystrixCommand(defaultFallback = "fallBack",commandProperties = {
+            @HystrixProperty(name = "circuitBreaker.enabled",value = "true"),// 是否开启断路器
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "10"),// 请求次数
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "10000"), // 时间窗口期
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "60"),// 失败率达到多少后跳闸
+    })
+    public String ServerCut(@PathVariable("id") int ids){
+        int id = ids;
+        if(id<0){
+            throw new RuntimeException("失败");
+        }
+        return "调用成功：" + id;
+
+    }
+
+    public String fallBack(@PathVariable("id") int id){
+        return "调用失败：" + id;
+    }
 
 
 }
