@@ -11,6 +11,7 @@
         <module name="cloud-consumer-order-hystrix80" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-eureka7002" />
+        <module name="cloud-gateway-gateway9527" />
         <module name="cloud-provider-hystrix-payment8100" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-payment8002" />
