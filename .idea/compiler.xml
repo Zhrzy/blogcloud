@@ -15,6 +15,7 @@
         <module name="cloud-provider-hystrix-payment8100" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-payment8002" />
+        <module name="cloud-provider-zkpayment8004" />
         <module name="cloudproviderpayment8001" />
         <module name="eureka-server7001" />
       </profile>
