@@ -19,6 +19,7 @@
         <module>cloud-consumer-order-hystrix80</module>
         <module>cloud-gateway-gateway9527</module>
         <module>cloud-provider-zkpayment8004</module>
+        <module>cloud-consumerzk-order80</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -10,6 +10,7 @@
         <module name="cloud-consumer-feign-order80" />
         <module name="cloud-consumer-order-hystrix80" />
         <module name="cloud-consumer-order80" />
+        <module name="cloud-consumerzk-order80" />
         <module name="cloud-eureka7002" />
         <module name="cloud-gateway-gateway9527" />
         <module name="cloud-provider-hystrix-payment8100" />
@@ -21,6 +22,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-consumer-zkorder80" target="1.8" />
       <module name="cloud-eureka-server7001" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/cloud-consumer-feign-order80" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order-hystrix80" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order80" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumer-zkorder80" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-consumerzk-order80" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-eureka7002" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-gateway-gateway9527" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-hystrix-payment8100" charset="UTF-8" />
