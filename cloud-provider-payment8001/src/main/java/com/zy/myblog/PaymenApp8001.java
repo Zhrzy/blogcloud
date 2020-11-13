@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
+//该注解用于服务发现
 @EnableDiscoveryClient
 public class PaymenApp8001 {
     public static void main(String[] args) {
