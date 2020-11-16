@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ApplicationContextConfig {
     @Bean
+    //注释掉RestTemplate的LoadBalanced，屏蔽其默认的负载均衡算法
     @LoadBalanced
     public RestTemplate getRestTemplate(){
         return new RestTemplate();

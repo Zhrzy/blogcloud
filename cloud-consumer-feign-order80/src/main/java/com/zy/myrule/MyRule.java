@@ -1,9 +1,8 @@
-package com.zy.rule;
+package com.zy.myrule;
 
 import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.RandomRule;
 import com.netflix.loadbalancer.RoundRobinRule;
-import com.zy.myblog.conf.MyRoundBalance;
+import com.zy.myblog.MyRoundBalance;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

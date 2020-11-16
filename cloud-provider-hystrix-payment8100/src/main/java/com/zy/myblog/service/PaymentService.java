@@ -29,7 +29,6 @@ public class PaymentService {
     @HystrixCommand(fallbackMethod = "testFallBack",commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "5000")
     })
-
     public String getTimeOut(Long id){
         int a = 1/0;
         /*try {
@@ -40,16 +39,14 @@ public class PaymentService {
         //try { TimeUnit.MILLISECONDS.sleep(4000); } catch (InterruptedException e) { e.printStackTrace(); }
         return "服务端8100 ：Hystrix return ID:"+id+" is TIMEOUT: 4000ms";
     }
-
-    public String getTimeOutGloble(){
-
-        return  "服务端接口调用";
-    }
-
-
     public  String testFallBack(Long id){
         return "服务端8100 ：Hystrix fallback ------服务超时或则错误";
     }
+
+    public String getTimeOutGloble(){ return  "服务端接口调用"; }
+
+
+
 
     /*服务熔断*/
 
