@@ -23,7 +23,6 @@ public class PaymentServiceFallBack implements PaymentServiceFeign {
     @Override
     public String getTimeOutGloble() {
         return "作用于feign客户端接口的fallback --- getTimeOutGloble";
-
     }
 
     @Override

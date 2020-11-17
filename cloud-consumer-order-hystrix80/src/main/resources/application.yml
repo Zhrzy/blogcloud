@@ -4,17 +4,19 @@ server:
 spring:
   application:
     name: cloud-consumer-order-hystrix
+  main:
+    allow-bean-definition-overriding: true
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka
-#ribbon:
+ribbon:
   #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
-  #ReadTimeout: 3000
+  ReadTimeout: 6000
   #指的是建立连接后从服务器读取到可用资源所用的时间
-  #ConnectTimeout: 3000
+  ConnectTimeout: 6000
 feign:
   hystrix:
     enabled: true
