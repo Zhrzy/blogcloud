@@ -1,5 +1,7 @@
 package com.zy.myblog.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zy.myblog.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,5 +35,21 @@ public class HystrixPaymentController {
     public String ServiceCut(@PathVariable("id") int id) {
         return paymentService.ServerCut(id);
     }
+
+
+
+    /*服务熔断******************************/
+
+    @GetMapping("/hy/ok1")
+    public String getok1(){
+        return paymentService.getOk1();
+    }
+
+    @GetMapping("/hy/ok2")
+    public String getok2(){
+        return paymentService.getOk2();
+    }
+
+    /*服务熔断******************************/
 
 }

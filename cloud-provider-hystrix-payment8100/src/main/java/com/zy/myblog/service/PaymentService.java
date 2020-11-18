@@ -1,15 +1,9 @@
 package com.zy.myblog.service;
 
-import com.netflix.hystrix.HystrixCommandProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
-import org.springframework.cloud.netflix.hystrix.HystrixProperties;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
-import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author zy 1716457206@qq.com
@@ -68,6 +62,31 @@ public class PaymentService {
     public String fallBack(@PathVariable("id") int id){
         return "调用失败：" + id;
     }
+
+
+    /*服务熔断************************测试*/
+    public String getOk1(){
+        return "ok1-->8100";
+    }
+
+
+    @HystrixCommand(fallbackMethod = "ok2fallback",commandProperties = {
+            /*当请求时间超过1000ms降级，返回fallback方法*/
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1000")
+    })
+    public String getOk2() {
+        try {
+            Thread.currentThread().sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "ok2timeout-->8100 timeout5000";
+    }
+
+    public String ok2fallback(){
+        return "我为服务超时顶着..";
+    }
+    /*服务熔断************************测试*/
 
 
 }
