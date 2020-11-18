@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
  * @author zy 1716457206@qq.com
  */
 @Component
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
+@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",fallback = PaymentServiceFeignSecondFallback.class)
 public interface PaymentServiceFeignSecond {
 
     @GetMapping("/hy/get/ok1")
@@ -16,4 +16,11 @@ public interface PaymentServiceFeignSecond {
 
     @GetMapping("/hy/get/ok2")
     public String ok2();
+
+    @GetMapping("/hy/get/ok3")
+    public String ok3();
+
+    @GetMapping("/hy/get/ok4")
+    public String ok4();
+
 }

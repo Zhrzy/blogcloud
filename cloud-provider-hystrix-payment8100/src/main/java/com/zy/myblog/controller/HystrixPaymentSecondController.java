@@ -21,5 +21,13 @@ public class HystrixPaymentSecondController {
     public String ok2(){
         return paymentServiceSecond.ok2();
     }
+    @GetMapping("/hy/get/ok3")
+    public String ok3() {
+        return paymentServiceSecond.ok3();
+    }
+    @GetMapping("/hy/get/ok4")
+    public String ok4() {
+        return paymentServiceSecond.ok4();
+    }
 
 }
