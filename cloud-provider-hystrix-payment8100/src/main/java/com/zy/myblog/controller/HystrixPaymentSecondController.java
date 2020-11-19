@@ -3,6 +3,7 @@ package com.zy.myblog.controller;
 import com.zy.myblog.service.PaymentServiceSecond;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -29,5 +30,13 @@ public class HystrixPaymentSecondController {
     public String ok4() {
         return paymentServiceSecond.ok4();
     }
+
+    @GetMapping("/hy/get/ok4/{id}")
+    public String ok5(@PathVariable("id") Integer id) {
+        System.out.println("请求参数---"+id);
+        return paymentServiceSecond.ok5(id);
+    }
+
+
 
 }

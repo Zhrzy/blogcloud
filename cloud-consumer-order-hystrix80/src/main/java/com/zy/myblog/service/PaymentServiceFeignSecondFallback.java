@@ -23,4 +23,10 @@ public class PaymentServiceFeignSecondFallback implements PaymentServiceFeignSec
     public String ok4() {
         return "80ok4服务降级，实现feign接口调用";
     }
+
+    @Override
+    public String ok5(Integer id) {
+        return "80----feign接口";
+    }
+
 }

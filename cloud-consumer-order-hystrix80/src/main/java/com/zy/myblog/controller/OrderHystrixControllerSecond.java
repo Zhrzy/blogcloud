@@ -5,6 +5,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zy.myblog.service.PaymentServiceFeignSecond;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -41,6 +42,12 @@ public class OrderHystrixControllerSecond {
     @GetMapping("/get/order/ok4")
     public String ok4(){
         return paymentServiceFeignSecond.ok4();
+    }
+
+
+    @GetMapping("/get/ok5/{id}")
+    public String ok5(@PathVariable("id") Integer id) {
+        return paymentServiceFeignSecond.ok5(id);
     }
 
 }

@@ -3,6 +3,7 @@ package com.zy.myblog.service;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @author zy 1716457206@qq.com
@@ -23,4 +24,6 @@ public interface PaymentServiceFeignSecond {
     @GetMapping("/hy/get/ok4")
     public String ok4();
 
+    @GetMapping("/hy/get/ok4/{id}")
+    public String ok5(@PathVariable("id") Integer id) ;
 }
