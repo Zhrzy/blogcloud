@@ -20,6 +20,8 @@
         <module>cloud-gateway-gateway9527</module>
         <module>cloud-provider-zkpayment8004</module>
         <module>cloud-consumerzk-order80</module>
+        <module>microservicecloud-config-3344</module>
+        <module>cloud-config-Server3344</module>
     </modules>
     <packaging>pom</packaging>
 
