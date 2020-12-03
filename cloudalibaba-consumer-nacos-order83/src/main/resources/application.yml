@@ -7,7 +7,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 47.114.172.114:80
 
 service-url:
   nacos-user-service: http://alibaba-provider
