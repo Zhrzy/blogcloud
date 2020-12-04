@@ -8,6 +8,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicecloud-config-3344/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -16,6 +17,7 @@
         <option value="$PROJECT_DIR$/cloud-eureka-server7001/cloud-eureka7002/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-eureka-server7001/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider-payment8001/cloud-provider-payment8002/pom.xml" />
+        <option value="$PROJECT_DIR$/microservicecloud-config-3344/microservicecloud-config-3355/pom.xml" />
       </set>
     </option>
   </component>
